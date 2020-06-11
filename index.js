@@ -1,4 +1,4 @@
-var app = require('./apap');
+var app = require('./app');
 
 const mongoose = require('mongoose');
 
