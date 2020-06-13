@@ -14,7 +14,7 @@ function saveUser(req,res){
     user.name = params.name;
     user.surname = params.surname;
     user.email = params.email.toLowerCase();
-    user.role = 'ROLE_ADMIN';
+    user.role = 'ROLE_USER';
     user.image = 'null';
 
     if(params.password){
@@ -57,6 +57,8 @@ function loginUser(req,res){
 
      let email = params.email;
      let password = params.password;
+     console.log(email);
+     
 
      User.findOne({email: email.toLowerCase()},(err,user)=>{
          if (err) {

@@ -115,8 +115,11 @@ function uploadSong(req, res) {
 
     if (req.files) {
         var file_path = req.files.file.path;
-        var file_split = file_path.split('/');
-             file_name = file_split[2];
+        console.log(file_path);
+        var file_split = file_path.split('\\');
+        console.log(file_split);
+         file_name = file_split[2];
+         console.log(file_name);
         var ext_split = file_name.split('\.');
         var file_ext = ext_split[1];
         if (file_ext == 'mp3' || file_ext=='ogg' ) {
