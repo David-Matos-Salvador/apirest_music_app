@@ -116,7 +116,8 @@ var userId = req.params.id;
 var file_name='No subido ...';
 
 if (req.files) {
-    var file_path=req.files.image.path;    
+    var file_path=req.files.image.path; 
+    console.log(file_path);   
     var file_split=file_path.split('\\');
     console.log(file_split);
     var file_name=file_split[2];
