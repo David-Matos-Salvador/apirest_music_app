@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "Curso de Udemy de Victor Robles",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-     "dev":"nodemon index.js",
+  "scripts": {    
      "start":"node index.js "
   },
   "keywords": [],
