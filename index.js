@@ -3,7 +3,7 @@ var app = require('./app');
 const mongoose = require('mongoose');
 
 
-mongoose.connect('mongodb://localhost/curso-udemy', {
+mongoose.connect('mongodb+srv://brok504:afiliados21@cluster0.zx6zn.azure.mongodb.net/Cluster0?retryWrites=true&w=majority', {
     useUnifiedTopology: true,
     useNewUrlParser: true,
     useFindAndModify:false
