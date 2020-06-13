@@ -118,7 +118,7 @@ var file_name='No subido ...';
 if (req.files) {
     var file_path=req.files.image.path; 
     console.log(file_path);   
-    var file_split=file_path.split('\\');
+    var file_split=file_path.split('/');// estamos en linux en este caso sino el split seria ('\\')
     console.log(file_split);
     var file_name=file_split[2];
     console.log(file_name);
