@@ -9,7 +9,7 @@ API para la aplicación de música [app-music-](https://github.com/David-Matos-S
 Esta API fue modernizada y migrada con **asistencia de IA** (agentes de desarrollo):
 
 - **Código:** reescrita a **Node 22 + Express 5 + Mongoose 9** en ESM, con validación Zod y tests con `node:test` + supertest.
-- **Infraestructura:** migrada de **Heroku + MongoDB Atlas** a un **VPS propio (Contabo) con Coolify**. Producción corre en [`https://api.davidmatos.lat`](https://api.davidmatos.lat) con MongoDB, Redis y almacenamiento S3 (SeaweedFS) en contenedores Docker con volúmenes persistentes (proyecto `SHARED-INFRA` en Coolify).
+- **Infraestructura:** migrada de **Heroku + MongoDB Atlas** a un **VPS propio (Contabo) con Coolify**. Producción corre en [`https://api-app-music.davidmatos.lat`](https://api-app-music.davidmatos.lat) con MongoDB, Redis y almacenamiento S3 (SeaweedFS) en contenedores Docker con volúmenes persistentes (proyecto `SHARED-INFRA` en Coolify).
 - Los ficheros subidos (`UPLOAD_DIR`) viven en un volumen persistente montado en `/app/upload`, así sobreviven a los despliegues.
 - CI (`.github/workflows/ci.yml`): lint, formato y tests en cada push y PR.
 
