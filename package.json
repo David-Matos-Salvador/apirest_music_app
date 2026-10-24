@@ -1,24 +1,46 @@
 {
-  "name": "Cursoudemy",
-  "version": "1.0.0",
-  "description": "Curso de Udemy de Victor Robles",
-  "main": "index.js",
-  "scripts": {    
-     "start":"node index.js "
+  "name": "apirest-music-app",
+  "version": "2.0.0",
+  "description": "API REST para la aplicación de música (usuarios, artistas, álbumes y canciones)",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=22"
   },
-  "keywords": [],
-  "author": "Victor David Matos Salvador ",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.js",
+    "dev": "node --watch --env-file-if-exists=.env src/server.js",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "node --test \"test/**/*.test.js\"",
+    "make-admin": "node --env-file-if-exists=.env scripts/make-admin.js"
+  },
+  "keywords": [
+    "express",
+    "mongodb",
+    "api",
+    "music"
+  ],
+  "author": "Victor David Matos Salvador",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^4.0.1",
-    "connect-multiparty": "^2.2.0",
-    "express": "^4.17.1",
-    "jwt-simple": "^0.5.6",
-    "moment": "^2.24.0",
-    "mongoose": "^5.9.9",
-    "mongoose-pagination": "^1.0.0"
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.1",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.11.3",
+    "multer": "^2.5.0",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
-    "nodemon": "^2.0.3"
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0",
+    "mongodb-memory-server": "^11.3.0",
+    "prettier": "^3.9.10",
+    "supertest": "^7.3.1"
   }
 }
